@@ -1,143 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rana Pratap Cherukuri | Student Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-        }
-        header {
-            background-color: #0056b3;
-            color: white;
-            text-align: center;
-            padding: 30px 0;
-        }
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 15px;
-            background-color: #003d80;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        section {
-            padding: 20px;
-        }
-        .about, .projects, .achievements, .contact {
-            margin-bottom: 30px;
-        }
-        .about img {
-            max-width: 150px;
-            border-radius: 50%;
-            margin-right: 20px;
-        }
-        .about-content {
-            display: flex;
-            align-items: center;
-        }
-        .about-content p {
-            margin: 0;
-        }
-        .project {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        .project-card {
-            background: #f4f4f4;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            padding: 15px;
-            width: 300px;
-        }
-        .contact form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #0056b3;
-            color: white;
-        }
-    </style>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Rana Pratap Cherukuri | AI & ML Student</title>
 
-<header>
-    <h1>Rana Pratap Cherukuri</h1>
-    <p>Aspiring CS Major | Junior @ Centennial High School</p>
-</header>
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
 
-<nav>
-    <a href="#about">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#contact">Contact</a>
-</nav>
+		<!-- FontAwesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
 
-<section id="about" class="about">
-    <h2>About Me</h2>
-    <div class="about-content">
-        <img src="rana_headshot1.jpeg" alt="Profile Picture">
-        <p>Hello! I'm Rana Pratap Cherukuri, a Junior at Centennial High School. I am passionate about computer science, programming, AI and machine learning, and software. I enjoy programming and am eager to learn and grow in artificial intelligence and software.</p>
-    </div>
-</section>
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+	</head>
 
-<section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="project">
-        <div class="project-card">
-            <h3>Bias Mitigation in AI / ML Algorithms</h3>
-            <p><strong>Thesis:</strong><br><br>How can we identify and mitigate bias in machine learning algorithms to ensure fairness across diverse demographic groups?<br><br><strong>Hypothesis:</strong><br><br>By ensuring data quality, selecting appropriate algorithms, engineering relevant features, employing bias detection techniques, and conducting regular monitoring, we can effectively use machine learning and AI-powered systems to identify and mitigate bias in machine learning algorithms to promote fairness across diverse demographic </p>
-        </div>
-        <div class="project-card">
-            <h3>[Project Name]</h3>
-            <p></p>
-        </div>
-    </div>
-</section>
+	<body>
+		<header>
+			<h1>Rana Pratap Cherukuri</h1>
+			<p id="header-greeting">
+				Aspiring CS Major | Senior @ Centennial High School (Class of 2026)
+			</p>
+			<a href="assets/RC Resume.pdf" download class="resume-btn">
+				<i class="fa-solid fa-download"></i> Download Resume
+			</a>
+			(Upd. Jan 2026)
+		</header>
 
-<section id="achievements" class="achievements">
-    <h2>Achievements</h2>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</section>
+		<nav id="navbar">
+			<!-- <a href="/countdown.html" class="countdowns-btn">Countdowns!</a> -->
+			<a href="#about">About</a>
+			<a href="#skills">Skills</a>
+			<a href="#experience">Experience</a>
+			<a href="#projects">Projects</a>
+			<a href="#contact">Contact</a>
+			<button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
+				<i class="fa-solid fa-moon"></i>
+			</button>
+		</nav>
 
-<section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>If you'd like to learn more about my work or discuss opportunities, feel free to reach out!</p>
-    <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        <button type="submit">Send</button>
-    </form>
-</section>
+		<main>
+			<!-- ABOUT -->
+			<section id="about" class="about">
+				<h2>About Me</h2>
+				<div class="about-content">
+					<img src="assets/rana_headshot2.JPG" alt="Profile Picture" />
+					<p>
+						I’m a motivated high school senior aspiring to major in and pursue
+						an Artificial Intelligence-adjacent field, with strong interests in
+						machine learning, software development, and ethical technology. I
+						have hands-on experience through internships, research under
+						university professors, and leadership in large-scale hackathons.
+						<br /><br />
+						My work spans AI bias mitigation, edge AI and sensor fusion,
+						full-stack web development, and student outreach. I aim to build
+						responsible, impactful AI systems that solve real-world problems
+						while prioritizing fairness and societal benefit.
+					</p>
+				</div>
+			</section>
 
-<footer>
-    <p>&copy; 2024 Rana Pratap Cherukuri. All rights reserved. | Built with passion!</p>
-</footer>
+			<!-- SKILLS + EXPERIENCE -->
+			<section class="skills-experience split-container">
+				<div class="split-left">
+					<section id="skills" class="skills">
+						<h2>Skills</h2>
 
-</body>
+						<div class="skill">
+							<span class="skill-name">Python</span
+							><span class="skill-tag">Advanced</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">Java</span
+							><span class="skill-tag">Advanced</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">JavaScript</span
+							><span class="skill-tag">Intermediate</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">HTML / CSS</span
+							><span class="skill-tag">Advanced</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">Django</span
+							><span class="skill-tag">Intermediate</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">Machine Learning & AI</span
+							><span class="skill-tag">Intermediate</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">SQL</span
+							><span class="skill-tag">Intermediate</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">Git & GitHub</span
+							><span class="skill-tag">Advanced</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">UI / UX Design (Figma)</span
+							><span class="skill-tag">Intermediate</span>
+						</div>
+						<div class="skill">
+							<span class="skill-name">Power BI</span
+							><span class="skill-tag">Intermediate</span>
+						</div>
+
+						<h3 style="margin-top: 1.5rem">Languages</h3>
+						<p>English (Fluent), Telugu (Fluent), Spanish (Conversational)</p>
+					</section>
+				</div>
+
+				<div class="split-right">
+					<section id="experience" class="experience">
+						<h2>Experience</h2>
+						<div class="timeline">
+							<article class="timeline-item">
+								<h3>ML / AI Intern — AI SENSE (UMBC)</h3>
+								<span class="timeline-date">Feb 2025 – Present</span>
+								<p>
+									Conducted research under UMBC professors on sensor fusion and
+									edge AI systems for real-time detection and prediction in
+									human–wildlife conflict scenarios. Built and curated
+									image-based datasets using Label Studio.
+								</p>
+							</article>
+
+							<article class="timeline-item">
+								<h3>
+									High School Intern — FNE Technology & Moon Tech Solutions
+								</h3>
+								<span class="timeline-date">Sept 2024 – Mar 2025</span>
+								<p>
+									Performed independent research on AI/ML bias mitigation.
+									Trained in Linux, networking, cloud technologies,
+									cybersecurity, AI/ML, and Power BI.
+								</p>
+							</article>
+
+							<article class="timeline-item">
+								<h3>
+									Software Developer Intern — International Software Systems
+								</h3>
+								<span class="timeline-date"
+									>Jun 2024 – Jul 2024 || Jun 2023 - Aug 2023</span
+								>
+								<p>
+									Developed a Status Report Management web application using
+									Django, HTML, CSS, and PostgreSQL. Participated in SCRUM
+									meetings, API testing with Postman, and database integration.
+								</p>
+							</article>
+
+							<article class="timeline-item">
+								<h3>Sales Associate — Norman’s Hallmark</h3>
+								<span class="timeline-date">Jan 2025 – Present</span>
+								<p>
+									Delivered customer service, operated POS systems, handled
+									transactions, and maintained organized inventory displays.
+								</p>
+							</article>
+						</div>
+					</section>
+				</div>
+			</section>
+
+			<!-- PROJECTS -->
+			<section id="projects" class="projects">
+				<h2>Projects & Leadership</h2>
+				<div class="project">
+					<div class="project-card tilt">
+						<h3>Bias Mitigation in AI / ML</h3>
+						<p>
+							Research project analyzing demographic bias in machine learning
+							systems. Focused on data quality, feature engineering, algorithm
+							selection, bias detection tools, and continuous monitoring to
+							promote fairness.
+						</p>
+					</div>
+
+					<div class="project-card tilt">
+						<h3>AI SENSE — Edge AI for Wildlife Management</h3>
+						<p>
+							Developed ethical AI-driven detection systems using edge computing
+							and sensor fusion to enable adaptive, real-time responses to
+							human–wildlife conflict in the DMV region.
+						</p>
+					</div>
+
+					<div class="project-card tilt">
+						<h3>QuHacks 2025 — Organizer & Sponsor</h3>
+						<p>
+							Fundraised ~$7,000 to organize a large-scale hackathon at Johns
+							Hopkins APL. Coordinated outreach to schools and organizations,
+							inviting hundreds of middle and high school students.
+						</p>
+					</div>
+
+					<div class="project-card tilt">
+						<h3>Pyoneers Python Programming Club</h3>
+						<p>
+							President of the Pyoneers club. Led technical sessions, managed
+							operations, and supported the Competitive Informatics Tournament
+							(CInT) hackathon.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- CONTACT -->
+			<section id="contact" class="contact">
+				<h2>Contact</h2>
+				<p>
+					rcheru5712@gmail.com <br />
+					+1 (571) 464-2670
+				</p>
+
+				<!-- <form
+					action="https://formspree.io/f/mgvyzqwr"
+					method="POST"
+					id="contact-form"
+				>
+					<input type="text" name="name" placeholder="Your Name" required />
+					<input type="email" name="email" placeholder="Your Email" required />
+					<textarea
+						name="message"
+						rows="5"
+						placeholder="Your Message"
+						required
+					></textarea>
+					<button type="submit">Send</button>
+				</form> -->
+			</section>
+		</main>
+
+		<footer>
+			<p>
+				&copy; 2026 Rana Pratap Cherukuri. Built with purpose and curiosity.
+			</p>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
 </html>

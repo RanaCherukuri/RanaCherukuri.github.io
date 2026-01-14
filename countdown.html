@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Countdowns!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&family=Quicksand:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="countdown.css" />
+</head>
+<body>
+  <div class="main-container">
+    <aside class="sidebar">
+      <button id="theme-toggle" class="theme-toggle-btn">Toggle Dark/Light Mode</button>
+      <div class="countdown-buttons">
+        <div class="event-filters">
+          <label for="sort-type">Sort by:</label>
+          <select id="sort-type">
+            <option value="name">Name</option>
+            <option value="date">Date</option>
+            <option value="importance">Importance</option>
+          </select>
+          <select id="sort-order">
+            <option value="asc">Ascending</option>
+            <option value="desc">Descending</option>
+          </select>
+          <button id="apply-sort">Apply</button>
+        </div>
+        <h3>Default Events</h3>
+        <div class="default-events">
+          <button onclick="setDate('August 24, 2025', 'Start of School')">Start of School</button>
+          <button onclick="setDate('January 1, 2026', 'New Year 2026')">New Year 2026</button>
+          <button onclick="setDate('June 27, 2025', 'A-Day')">A-Day</button>
+        </div>
+        <h3>Custom Events</h3>
+        <div class="custom-events">
+          
+        </div>
+      </div>
+    </aside>
+    <button id="open-add-event" class="floating-add-btn">+</button>
+    <main class="content">
+      <h1 id="countdown-title">Countdown to Start of School</h1>
+      <div id="countdown-timer">Loading...</div>
+      <button class="home-button" onclick="window.location.href='/index.html'">Back to Portfolio</button>
+    </main>
+  </div>
+
+  <div id="add-event-modal" class="modal">
+    <div class="modal-content">
+      <span id="close-modal" class="close">&times;</span>
+      <h2>Add Custom Event</h2>
+      <input type="text" id="event-name" placeholder="Event Name" />
+      <input type="date" id="event-date" />
+      <select id="event-importance">
+        <option value="1">1 (Least)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Most)</option>
+      </select>
+      <button id="save-event">Save Event</button>
+    </div>
+  </div>
+
+  <script src="countdown.js"></script>
+</body>
+</html>

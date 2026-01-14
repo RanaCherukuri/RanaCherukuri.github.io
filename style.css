@@ -1,191 +1,334 @@
-/* General Styles */
+/* Fonts */
 body {
     font-family: 'Roboto', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    line-height: 1.6;
-    background-color: #f9f9f9;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+/* CSS Variables for light and dark modes */
+:root {
+    --background-color: #fefefe;
+    --text-color: #222222;
+    --header-bg: #4a90e2;
+    --header-text: #ffffff;
+    --nav-bg: #357abd;
+    --nav-link-color: #ffffff;
+    --nav-link-active-border: #ffd700;
+    --section-bg: #ffffff;
+    --project-bg: #f9f9f9;
+    --project-border: #ccc;
+    --footer-bg: #4a90e2;
+    --footer-text: #ffffff;
 }
 
-h1, h2, h3 {
-    margin: 0;
+body.dark {
+    --background-color: #121417;
+    --text-color: #e6e8eb;
+    --header-bg: #2a2f45;
+    --header-text: #d1d6e0;
+    --nav-bg: #22293b;
+    --nav-link-color: #c0c6d8;
+    --nav-link-active-border: #f6c90e;
+    --section-bg: #1e2233;
+    --project-bg: #2a2e44;
+    --project-border: #3c4366;
+    --footer-bg: #2a2f45;
+    --footer-text: #d1d6e0;
 }
 
-/* Header */
+/* Improve button#theme-toggle styling in dark mode for better contrast */
+body.dark button#theme-toggle {
+    border-color: var(--nav-link-color);
+    color: var(--nav-link-color);
+}
+
+body.dark button#theme-toggle:hover {
+    background-color: var(--nav-link-color);
+    color: var(--nav-bg);
+}
+
+/* Add subtle shadow to text for better readability in dark mode */
+body.dark, 
+body.dark header, 
+body.dark nav a, 
+body.dark section, 
+body.dark footer {
+    text-shadow: 0 0 4px rgba(0,0,0,0.6);
+}
+
+/* Slight variation for skill bars in dark mode for clarity */
+body.dark .skill-bar {
+    background-color: #3a3f5a;
+}
+
+body.dark .skill-level {
+    background-color: #f6c90e;
+}
+
 header {
-    background-color: #0073e6;
-    color: white;
+    background-color: var(--header-bg);
+    color: var(--header-text);
     text-align: center;
-    padding: 40px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 20px 0;
+    font-family: 'Merriweather', serif;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2.8rem;
+    margin: 0;
 }
 
 header p {
-    font-size: 1.2rem;
-    font-weight: 300;
+    font-size: 1.1rem;
+    margin-top: 6px;
 }
 
-/* Navigation */
 nav {
     display: flex;
     justify-content: center;
-    background-color: #005bb5;
+    gap: 20px;
     padding: 15px 0;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: var(--nav-bg);
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 nav a {
-    color: white;
-    font-weight: bold;
-    margin: 0 15px;
-    transition: color 0.3s;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
 }
 
-nav a:hover {
-    color: #ffd700;
+nav a:hover,
+nav a.active {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-bottom: none;
 }
 
-/* Section Styles */
+button#theme-toggle {
+    background-color: transparent;
+    color: var(--nav-link-color);
+    border: 2px solid var(--nav-link-color);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
+}
+
+button#theme-toggle:hover {
+    background-color: var(--nav-link-color);
+    color: var(--nav-bg);
+}
+
 section {
-    padding: 10px 10px; /* Reduced padding */
-    max-width: 1000px;
-    margin: 0 auto;
-    background: white;
-    margin-bottom: 10px; /* Reduced margin */
+    padding: 20px;
+    background-color: var(--section-bg);
+    margin-bottom: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-section h2 {
-    color: #0073e6;
-    margin-bottom: 10px;
-    font-size: 2rem;
-    border-bottom: 2px solid #0073e6;
-    display: inline-block;
-}
-
-p, ul {
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-/* About Section */
 .about-content {
     display: flex;
     align-items: center;
-    gap: 20px;
 }
 
-.about-content img {
+.about img {
     max-width: 150px;
-    border-radius: 25%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    margin-right: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Projects Section */
 .project {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-}
-
-.project-card {
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-}
-
-.project-card h3 {
-    color: #005bb5;
-    margin-bottom: 10px;
-}
-
-.project-card p {
-    font-size: 0.95rem;
-    color: #555;
-}
-
-/* Achievements Section */
-.achievements ul {
-    list-style-type: disc;
-    margin-left: 20px;
-    color: #0073e6;
-}
-
-.achievements ul li {
-    margin-bottom: 10px;
-}
-
-/* Contact Section */
-.contact form {
-    display: flex;
-    flex-direction: column;
     gap: 15px;
 }
 
-.contact label {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.contact input, .contact textarea, .contact button {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ddd;
+.project-card {
+    background: var(--project-bg);
+    border: 1px solid var(--project-border);
     border-radius: 5px;
+    padding: 15px;
+    width: 300px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--header-bg);
     outline: none;
-    transition: border-color 0.3s;
 }
 
-.contact input:focus, .contact textarea:focus {
-    border-color: #0073e6;
-}
-
-.contact button {
-    background-color: #0073e6;
-    color: white;
+button[type="submit"] {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    font-weight: bold;
     border: none;
+    border-radius: 4px;
+    padding: 10px 15px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
-.contact button:hover {
-    background-color: #005bb5;
+button[type="submit"]:hover {
+    background-color: var(--nav-bg);
 }
 
-/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #0073e6;
-    color: white;
-    margin-top: 10px; /* Slightly reduced margin */
+    padding: 15px;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
 }
 
-footer p {
-    font-size: 0.9rem;
-    margin: 0;
+main {
+    padding-top: 0;
+}
+
+/* New styles for split container and responsive layout */
+.split-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.split-left,
+.split-right {
+  flex: 1 1 45%;
+  min-width: 300px;
+}
+
+@media (max-width: 768px) {
+  .split-container {
+    flex-direction: column;
+  }
+}
+
+/* Added skill styles for improved readability */
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.skill-bar {
+  background-color: #ddd;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 16px;
+}
+
+.skill-level {
+  height: 100%;
+  background-color: var(--header-bg);
+  border-radius: 20px;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+/* New styles for skill tag layout */
+.skill {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: var(--project-bg);
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.skill-name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.skill-tag {
+  font-size: 0.85rem;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* Added tilt effect styling */
+.tilt {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: transform 0.3s ease;
+}
+
+/* Modal styles for project popup previews */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  display: none;
+}
+
+.modal-content {
+  background: var(--section-bg);
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-overlay.active {
+  display: flex;
 }

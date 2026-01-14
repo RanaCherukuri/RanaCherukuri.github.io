@@ -1,0 +1,380 @@
+body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background-color: #121212; /* Dark mode background similar to index.html */
+    color: #e0e0e0; /* Light gray text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.content {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-family: 'Quicksand', sans-serif;
+    color: #90caf9; /* Accent blue from index.html */
+}
+
+#countdown-timer {
+    font-size: 2em;
+    letter-spacing: 0.1em;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+    color: #bbdefb; /* lighter blue tone */
+}
+
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: #1e1e1e; /* dark background matching index.html sidebar */
+  color: #ddd;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.7);
+  z-index: 1000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sidebar button {
+  width: 100%;
+  padding: 10px 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: #eee;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sidebar button:hover {
+  background-color: #555;
+}
+
+/* Light mode overrides */
+body.light-mode {
+  background-color: #e6f0ff; /* light blue from index.html */
+  color: #222;
+}
+
+body.light-mode .content h1 {
+  color: #1976d2; /* darker blue accent */
+}
+
+body.light-mode #countdown-timer {
+  color: #0d47a1; /* even darker blue */
+}
+
+body.light-mode .sidebar {
+  background-color: #bbdefb;
+  color: #222;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+}
+
+body.light-mode .sidebar button {
+  background-color: #90caf9;
+  color: #222;
+}
+
+body.light-mode .sidebar button:hover {
+  background-color: #64b5f6;
+}
+
+/* Offset main content for sidebar width */
+main.content {
+  margin-left: 220px;
+  padding: 40px 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: none;
+  }
+  main.content {
+    margin-left: 0;
+  }
+  .sidebar button {
+    width: auto;
+    margin: 0 5px;
+  }
+}
+
+.home-button {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: #eee;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.home-button:hover {
+  background-color: #555;
+}
+
+body.light-mode .home-button {
+  background-color: #90caf9;
+  color: #222;
+}
+
+body.light-mode .home-button:hover {
+  background-color: #64b5f6;
+}
+
+body.light-mode main.content {
+  background-color: #e6f0ff;
+  color: #222;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode main.content h1 {
+  color: #1976d2;
+}
+
+/* Background animation - starfield with actual smooth movement */
+
+/* Background animation - larger stars, faster movement */
+
+/* Base starfield for dark mode (default) */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 300%;
+  width: 300%;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.15;
+
+  background:
+    radial-gradient(circle 4px, white 100%, transparent 100%) 0 0,
+    radial-gradient(circle 3px, white 100%, transparent 100%) 60px 60px,
+    radial-gradient(circle 4.5px, white 100%, transparent 100%) 120px 120px,
+    radial-gradient(circle 3.5px, white 100%, transparent 100%) 180px 180px,
+    radial-gradient(circle 2.5px, white 100%, transparent 100%) 240px 240px;
+
+  background-repeat: repeat;
+  background-size: 300px 300px;
+
+  animation: moveStars 20s linear infinite;
+}
+
+/* Light mode starfield override - more visible */
+body.light-mode::before {
+  opacity: 0.15; /* increase opacity */
+  background:
+    radial-gradient(circle 4px, #444444 100%, transparent 100%) 0 0,
+    radial-gradient(circle 3px, #666666 100%, transparent 100%) 60px 60px,
+    radial-gradient(circle 4.5px, #555555 100%, transparent 100%) 120px 120px,
+    radial-gradient(circle 3.5px, #777777 100%, transparent 100%) 180px 180px,
+    radial-gradient(circle 2.5px, #444444 100%, transparent 100%) 240px 240px;
+}
+
+/* Same animation */
+@keyframes moveStars {
+  0% {
+    background-position: 0 0, 60px 60px, 120px 120px, 180px 180px, 240px 240px;
+  }
+  100% {
+    background-position: -300px -300px, -240px -240px, -180px -180px, -120px -120px, -60px -60px;
+  }
+}
+
+/* New styles for event button with delete span */
+.event-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.event-btn .delete-span {
+  margin-left: 10px;
+  color: #eee;
+  font-weight: bold;
+  padding: 0 5px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.event-btn .delete-span:hover {
+  background-color: #ffdddd;
+  color: red;
+}
+
+/* Added styles for new section headers and event groups */
+.countdown-buttons h3 {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #90caf9;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+body.light-mode .countdown-buttons h3 {
+  color: #1976d2;
+}
+
+.default-events, .custom-events {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Styles for event filters */
+.event-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+}
+.event-filters select, .event-filters button {
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+}
+.event-filters button {
+  background-color: #333;
+  color: #eee;
+  cursor: pointer;
+}
+.event-filters button:hover {
+  background-color: #555;
+}
+body.light-mode .event-filters button {
+  background-color: #90caf9;
+  color: #222;
+}
+body.light-mode .event-filters button:hover {
+  background-color: #64b5f6;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1e1e1e;
+  margin: 0;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.modal-content input, .modal-content button, .modal-content select {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.modal-content input {
+  background: #333;
+  color: #eee;
+}
+
+.modal-content button {
+  background: #333;
+  color: #eee;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+  background: #555;
+}
+
+.close {
+  align-self: flex-end;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+body.light-mode .modal-content {
+  background-color: #fff;
+  color: #222;
+}
+
+body.light-mode .modal-content input {
+  background: #eee;
+  color: #222;
+}
+
+body.light-mode .modal-content button {
+  background: #90caf9;
+  color: #222;
+}
+
+body.light-mode .modal-content button:hover {
+  background: #64b5f6;
+}
+
+.floating-add-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: none;
+  background-color: #90caf9;
+  color: #222;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 2100;
+  transition: background-color 0.3s ease;
+}
+
+.floating-add-btn:hover {
+  background-color: #64b5f6;
+}
