@@ -92,7 +92,7 @@ p, ul {
 
 .about-content img {
     max-width: 150px;
-    border-radius: 50%;
+    border-radius: 25%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
