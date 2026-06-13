@@ -8,15 +8,15 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:       #f9f7f4;
-  --bg2:      #f2efe9;
+  --bg:       #f4f5f9;
+  --bg2:      #c9d3e6;
   --fg:       #111010;
-  --fg2:      #4a4745;
-  --accent:   #c8622a;
-  --accent2:  #e8855a;
+  --fg2:      #46454a;
+  --accent:   #2a47c8;
+  --accent2:  #5a9ae8;
   --line:     rgba(17,16,16,0.10);
   --card-bg:  #ffffff;
-  --nav-bg:   rgba(249,247,244,0.88);
+  --nav-bg:   rgba(244, 244, 249, 0.88);
   --serif:    'Instrument Serif', Georgia, serif;
   --sans:     'DM Sans', system-ui, sans-serif;
   --radius:   12px;
