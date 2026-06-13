@@ -1,252 +1,569 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Rana Pratap Cherukuri | AI/ML Student</title>
-
-		<!-- Google Fonts -->
+		<title>Rana Pratap Cherukuri</title>
 		<link
-			href="https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap"
 			rel="stylesheet"
 		/>
-
-		<!-- FontAwesome -->
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		/>
-
-		<link rel="stylesheet" href="style.css" />
-		<script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+		<link rel="stylesheet" href="revamp.css" />
 	</head>
-
 	<body>
-		<header>
-			<h1>Rana Pratap Cherukuri</h1>
-			<p id="header-greeting">
-				Aspiring CS Major | Senior @ Centennial High School (Class of 2026)
-			</p>
-			<a href="assets/RC Resume.pdf" download class="resume-btn">
-				<i class="fa-solid fa-download"></i> Download Resume
-			</a>
-			(Upd. Jan 2026)
-		</header>
+		<!-- CURSOR -->
+		<div class="cursor-dot"></div>
+		<div class="cursor-ring"></div>
 
+		<!-- NAV -->
 		<nav id="navbar">
-			<!-- <a href="/countdown.html" class="countdowns-btn">Countdowns!</a> -->
+			<div class="nav-logo">RC</div>
+			<div class="nav-links">
+				<a href="#about">About</a>
+				<a href="#skills">Skills</a>
+				<a href="#experience">Experience</a>
+				<a href="#projects">Projects</a>
+				<a href="#education">Education</a>
+				<a href="#contact">Contact</a>
+			</div>
+			<div class="nav-right">
+				<button id="theme-toggle" aria-label="Toggle theme">
+					<i class="fa-solid fa-moon"></i>
+				</button>
+				<a href="assets/RC_Resume.pdf" download class="nav-resume">Resume</a>
+			</div>
+			<button class="nav-mobile-toggle" id="mobile-nav-btn" aria-label="Menu">
+				<span></span><span></span><span></span>
+			</button>
+		</nav>
+
+		<!-- MOBILE MENU -->
+		<div class="mobile-menu" id="mobile-menu">
 			<a href="#about">About</a>
 			<a href="#skills">Skills</a>
 			<a href="#experience">Experience</a>
 			<a href="#projects">Projects</a>
+			<a href="#education">Education</a>
 			<a href="#contact">Contact</a>
-			<button id="theme-toggle" aria-label="Toggle Dark/Light Mode">
-				<i class="fa-solid fa-moon"></i>
-			</button>
-		</nav>
+		</div>
 
-		<main>
-			<!-- ABOUT -->
-			<section id="about" class="about">
-				<h2>About Me</h2>
-				<div class="about-content">
-					<img src="assets/rana_headshot2.JPG" alt="Profile Picture" />
-					<p>
-						I’m a motivated high school senior aspiring to major in and pursue
-						an Artificial Intelligence-adjacent field, with strong interests in
-						machine learning, software development, and ethical technology. I
-						have hands-on experience through internships, research under
-						university professors, and leadership in large-scale hackathons.
-						<br /><br />
-						My work spans AI bias mitigation, edge AI and sensor fusion,
-						full-stack web development, and student outreach. I aim to build
-						responsible, impactful AI systems that solve real-world problems
-						while prioritizing fairness and societal benefit.
-					</p>
+		<!-- HERO -->
+		<section id="hero">
+			<div class="hero-inner">
+				<div class="hero-eyebrow">
+					<span class="dot-pulse"></span>
+					Available for internships & opportunities
 				</div>
-			</section>
-
-			<!-- SKILLS + EXPERIENCE -->
-			<section class="skills-experience split-container">
-				<div class="split-left">
-					<section id="skills" class="skills">
-						<h2>Skills</h2>
-
-						<div class="skill">
-							<span class="skill-name">Python</span
-							><span class="skill-tag">Advanced</span>
-						</div>
-						<div class="skill">
-							<span class="skill-name">Java</span
-							><span class="skill-tag">Advanced</span>
-						</div>
-						<div class="skill">
-							<span class="skill-name">JavaScript</span
-							><span class="skill-tag">Intermediate</span>
-						</div>
-						<div class="skill">
-							<span class="skill-name">HTML / CSS</span
-							><span class="skill-tag">Advanced</span>
-						</div>
-						<div class="skill">
-							<span class="skill-name">Django</span
-							><span class="skill-tag">Intermediate</span>
-						</div>
-						<div class="skill">
-							<span class="skill-name">Machine Learning & AI</span
-							><span class="skill-tag">Intermediate</span>
-						</div>
-						<div class="skill">
-							<span class="skill-name">SQL</span
-							><span class="skill-tag">Intermediate</span>
-						</div>
-						<div class="skill">
-							<span class="skill-name">Git & GitHub</span
-							><span class="skill-tag">Advanced</span>
-						</div>
-						<div class="skill">
-							<span class="skill-name">UI / UX Design (Figma)</span
-							><span class="skill-tag">Intermediate</span>
-						</div>
-						<div class="skill">
-							<span class="skill-name">Power BI</span
-							><span class="skill-tag">Intermediate</span>
-						</div>
-
-						<h3 style="margin-top: 1.5rem">Languages</h3>
-						<p>English (Fluent), Telugu (Fluent), Spanish (Conversational)</p>
-					</section>
-				</div>
-
-				<div class="split-right">
-					<section id="experience" class="experience">
-						<h2>Experience</h2>
-						<div class="timeline">
-							<article class="timeline-item">
-								<h3>ML / AI Intern — AI SENSE (UMBC)</h3>
-								<span class="timeline-date">Feb 2025 – Present</span>
-								<p>
-									Conducted research under UMBC professors on sensor fusion and
-									edge AI systems for real-time detection and prediction in
-									human–wildlife conflict scenarios. Built and curated
-									image-based datasets using Label Studio.
-								</p>
-							</article>
-
-							<article class="timeline-item">
-								<h3>
-									High School Intern — FNE Technology & Moon Tech Solutions
-								</h3>
-								<span class="timeline-date">Sept 2024 – Mar 2025</span>
-								<p>
-									Performed independent research on AI/ML bias mitigation.
-									Trained in Linux, networking, cloud technologies,
-									cybersecurity, AI/ML, and Power BI.
-								</p>
-							</article>
-
-							<article class="timeline-item">
-								<h3>
-									Software Developer Intern — International Software Systems
-								</h3>
-								<span class="timeline-date"
-									>Jun 2024 – Jul 2024 || Jun 2023 - Aug 2023</span
-								>
-								<p>
-									Developed a Status Report Management web application using
-									Django, HTML, CSS, and PostgreSQL. Participated in SCRUM
-									meetings, API testing with Postman, and database integration.
-								</p>
-							</article>
-
-							<article class="timeline-item">
-								<h3>Sales Associate — Norman’s Hallmark</h3>
-								<span class="timeline-date">Jan 2025 – Present</span>
-								<p>
-									Delivered customer service, operated POS systems, handled
-									transactions, and maintained organized inventory displays.
-								</p>
-							</article>
-						</div>
-					</section>
-				</div>
-			</section>
-
-			<!-- PROJECTS -->
-			<section id="projects" class="projects">
-				<h2>Projects & Leadership</h2>
-				<div class="project">
-					<div class="project-card tilt">
-						<h3>Bias Mitigation in AI / ML</h3>
-						<p>
-							Research project analyzing demographic bias in machine learning
-							systems. Focused on data quality, feature engineering, algorithm
-							selection, bias detection tools, and continuous monitoring to
-							promote fairness.
-						</p>
-					</div>
-
-					<div class="project-card tilt">
-						<h3>AI SENSE — Edge AI for Wildlife Management</h3>
-						<p>
-							Developed ethical AI-driven detection systems using edge computing
-							and sensor fusion to enable adaptive, real-time responses to
-							human–wildlife conflict in the DMV region.
-						</p>
-					</div>
-
-					<div class="project-card tilt">
-						<h3>QuHacks 2025 — Organizer & Sponsor</h3>
-						<p>
-							Fundraised ~$7,000 to organize a large-scale hackathon at Johns
-							Hopkins APL. Coordinated outreach to schools and organizations,
-							inviting hundreds of middle and high school students.
-						</p>
-					</div>
-
-					<div class="project-card tilt">
-						<h3>Pyoneers Python Programming Club</h3>
-						<p>
-							President of the Pyoneers club. Led technical sessions, managed
-							operations, and supported the Competitive Informatics Tournament
-							(CInT) hackathon.
-						</p>
-					</div>
-				</div>
-			</section>
-
-			<!-- CONTACT -->
-			<section id="contact" class="contact">
-				<h2>Contact</h2>
-				<p>
-					rcheru5712@gmail.com <br />
-					+1 (571) 464-2670
+				<h1 class="hero-name">
+					<span class="line-reveal">Rana Pratap</span>
+					<span class="line-reveal delay-1"><em>Cherukuri</em></span>
+				</h1>
+				<p class="hero-sub line-reveal delay-2">
+					AI / ML Researcher &amp; Developer — Incoming CS Freshman @ UMBC
 				</p>
+				<div class="hero-tags line-reveal delay-3">
+					<span>Machine Learning</span>
+					<span>Edge AI</span>
+					<span>Full-Stack Dev</span>
+					<span>AI Ethics</span>
+				</div>
+				<div class="hero-cta line-reveal delay-4">
+					<a href="#projects" class="btn-primary">View My Work</a>
+					<a href="#contact" class="btn-ghost">Get in Touch</a>
+				</div>
+				<div class="hero-social line-reveal delay-4">
+					<a
+						href="https://www.linkedin.com/in/ranacherukuri/"
+						target="_blank"
+						rel="noopener"
+						aria-label="LinkedIn"
+						><i class="fa-brands fa-linkedin"></i
+					></a>
+					<a href="mailto:rcheru5712@gmail.com" aria-label="Email"
+						><i class="fa-solid fa-envelope"></i
+					></a>
+					<a href="assets/RC_Resume.pdf" download aria-label="Download Resume"
+						><i class="fa-solid fa-file-arrow-down"></i
+					></a>
+				</div>
+			</div>
+			<div class="hero-scroll-indicator">
+				<span>Scroll</span>
+				<div class="scroll-line"></div>
+			</div>
+			<div class="hero-bg-grid"></div>
+			<div class="hero-bg-blob blob-1"></div>
+			<div class="hero-bg-blob blob-2"></div>
+		</section>
 
-				<!-- <form
-					action="https://formspree.io/f/mgvyzqwr"
-					method="POST"
-					id="contact-form"
-				>
-					<input type="text" name="name" placeholder="Your Name" required />
-					<input type="email" name="email" placeholder="Your Email" required />
-					<textarea
-						name="message"
-						rows="5"
-						placeholder="Your Message"
-						required
-					></textarea>
-					<button type="submit">Send</button>
-				</form> -->
-			</section>
-		</main>
+		<!-- ABOUT -->
+		<section id="about">
+			<div class="section-inner reveal">
+				<div class="section-label">01 — About</div>
+				<div class="about-grid">
+					<div class="about-text">
+						<h2>Building intelligent systems<br /><em>that matter.</em></h2>
+						<p>
+							I'm an incoming Computer Science freshman at UMBC with hands-on
+							experience in AI/ML research, software development, and ethical
+							technology. My work spans edge AI, sensor fusion,
+							privacy-preserving computer vision, full-stack development, and
+							large-scale event organization.
+						</p>
+						<p>
+							I aim to build responsible, impactful AI systems that solve
+							real-world problems — from wildlife conflict mitigation to bias in
+							K-12 education — while prioritizing fairness and societal benefit.
+						</p>
+						<div class="about-stats">
+							<div class="stat">
+								<span class="stat-num">4+</span
+								><span class="stat-label">Years Coding</span>
+							</div>
+							<div class="stat">
+								<span class="stat-num">4</span
+								><span class="stat-label">Internships</span>
+							</div>
+							<div class="stat">
+								<span class="stat-num">$7K</span
+								><span class="stat-label">Raised for QuHacks</span>
+							</div>
+						</div>
+					</div>
+					<div class="about-image-wrap">
+						<div class="about-image-frame">
+							<img src="assets/redGradPFP.png" alt="Rana Pratap Cherukuri" />
+						</div>
+						<div class="about-image-decoration"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- SKILLS -->
+		<section id="skills">
+			<div class="section-inner reveal">
+				<div class="section-label">02 — Skills</div>
+				<h2>What I work with</h2>
+				<div class="skills-grid">
+					<div class="skill-card">
+						<div class="skill-icon"><i class="fa-brands fa-python"></i></div>
+						<div class="skill-info">
+							<span class="skill-name">Python</span>
+							<span class="skill-level advanced">Advanced</span>
+						</div>
+					</div>
+					<div class="skill-card">
+						<div class="skill-icon"><i class="fa-brands fa-java"></i></div>
+						<div class="skill-info">
+							<span class="skill-name">Java</span>
+							<span class="skill-level advanced">Advanced</span>
+						</div>
+					</div>
+					<div class="skill-card">
+						<div class="skill-icon"><i class="fa-brands fa-js"></i></div>
+						<div class="skill-info">
+							<span class="skill-name">JavaScript</span>
+							<span class="skill-level intermediate">Intermediate</span>
+						</div>
+					</div>
+					<div class="skill-card">
+						<div class="skill-icon"><i class="fa-brands fa-html5"></i></div>
+						<div class="skill-info">
+							<span class="skill-name">HTML / CSS</span>
+							<span class="skill-level advanced">Advanced</span>
+						</div>
+					</div>
+					<div class="skill-card">
+						<div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+						<div class="skill-info">
+							<span class="skill-name">Canva</span>
+							<span class="skill-level advanced">Advanced</span>
+						</div>
+					</div>
+					<div class="skill-card">
+						<div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+						<div class="skill-info">
+							<span class="skill-name">ML / AI</span>
+							<span class="skill-level intermediate">Intermediate</span>
+						</div>
+					</div>
+					<div class="skill-card">
+						<div class="skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+						<div class="skill-info">
+							<span class="skill-name">Git & GitHub</span>
+							<span class="skill-level advanced">Advanced</span>
+						</div>
+					</div>
+					<div class="skill-card">
+						<div class="skill-icon"><i class="fa-solid fa-server"></i></div>
+						<div class="skill-info">
+							<span class="skill-name">Django</span>
+							<span class="skill-level intermediate">Intermediate</span>
+						</div>
+					</div>
+					<div class="skill-card">
+						<div class="skill-icon"><i class="fa-solid fa-pen-nib"></i></div>
+						<div class="skill-info">
+							<span class="skill-name">UI/UX (Figma)</span>
+							<span class="skill-level intermediate">Intermediate</span>
+						</div>
+					</div>
+					<div class="skill-card">
+						<div class="skill-icon"><i class="fa-solid fa-chart-bar"></i></div>
+						<div class="skill-info">
+							<span class="skill-name">Power BI</span>
+							<span class="skill-level intermediate">Intermediate</span>
+						</div>
+					</div>
+				</div>
+				<div class="languages-row">
+					<span class="lang-label">Languages spoken:</span>
+					<span class="lang-tag">English <em>Fluent</em></span>
+					<span class="lang-tag">Telugu <em>Fluent</em></span>
+					<span class="lang-tag">Spanish <em>Conversational</em></span>
+					<span class="lang-tag">Hindi <em>Basic</em></span>
+				</div>
+			</div>
+		</section>
+
+		<!-- EXPERIENCE -->
+		<section id="experience">
+			<div class="section-inner">
+				<div class="section-label">03 — Experience</div>
+				<h2>Where I've worked</h2>
+				<div class="timeline">
+					<div class="timeline-item" data-delay="0">
+						<div class="tl-left">
+							<div class="tl-dot"></div>
+							<span class="tl-date">Feb 2025 – Present</span>
+						</div>
+						<div class="tl-content">
+							<div class="tl-company">AI SENSE (UMBC)</div>
+							<h3>ML / AI Intern</h3>
+							<p>
+								Conducted research under UMBC Professor Dr. Basnyat on sensor
+								fusion and edge AI systems. Developed two AI-driven systems
+								integrating computer vision, deep learning, and
+								privacy-preserving techniques for real-world impact.
+							</p>
+							<ul class="tl-project-list">
+								<li>
+									<strong>AgriShield</strong> — Edge-based real-time
+									surveillance using face-swapping to preserve human privacy
+									while maintaining effective intruder detection in agricultural
+									settings.
+								</li>
+								<li>
+									<strong>DisasterNet</strong> — Progressive deep learning
+									segmentation model identifying water, houses, roads, and
+									vegetation in drone imagery for rapid disaster damage
+									assessment.
+								</li>
+							</ul>
+							<div class="tl-tags">
+								<span>Edge AI</span><span>Computer Vision</span
+								><span>Sensor Fusion</span><span>Deep Learning</span
+								><span>Label Studio</span>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-item" data-delay="300">
+						<div class="tl-left">
+							<div class="tl-dot"></div>
+							<span class="tl-date">Jan 2025 – Present</span>
+						</div>
+						<div class="tl-content">
+							<div class="tl-company">Norman's Hallmark</div>
+							<h3>Sales Associate</h3>
+							<p>
+								Delivered customer service, operated POS systems, handled
+								transactions, and maintained organized inventory displays.
+							</p>
+							<div class="tl-tags">
+								<span>Customer Service</span><span>POS Systems</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="timeline-item" data-delay="100">
+						<div class="tl-left">
+							<div class="tl-dot"></div>
+							<span class="tl-date">Oct 2024 – Mar 2025</span>
+						</div>
+						<div class="tl-content">
+							<div class="tl-company">FNE Technology & Moon Tech Solutions</div>
+							<h3>High School AI/ML Intern</h3>
+							<p>
+								Howard County Gifted &amp; Talented Intern/Mentor Program.
+								Performed independent research on AI/ML bias mitigation. Trained
+								in Linux, networking, cloud technologies, cybersecurity, AI/ML,
+								Power BI, and professional development.
+							</p>
+							<div class="tl-tags">
+								<span>AI Bias</span><span>Cloud</span><span>Power BI</span
+								><span>Linux</span><span>Cybersecurity</span>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-item" data-delay="200">
+						<div class="tl-left">
+							<div class="tl-dot"></div>
+							<span class="tl-date">Jun – Aug 2024</span>
+						</div>
+						<div class="tl-content">
+							<div class="tl-company">International Software Systems</div>
+							<h3>Summer Software Developer Intern</h3>
+							<p>
+								Worked on the UI and front-end development of a Status Report
+								Management web application using Django, HTML, CSS, and
+								PostgreSQL. Attended daily SCRUM standups and participated in
+								API testing with Postman.
+							</p>
+							<div class="tl-tags">
+								<span>Django</span><span>PostgreSQL</span><span>Postman</span
+								><span>SCRUM</span>
+							</div>
+						</div>
+					</div>
+					<div class="timeline-item" data-delay="250">
+						<div class="tl-left">
+							<div class="tl-dot"></div>
+							<span class="tl-date">Jun – Aug 2023</span>
+						</div>
+						<div class="tl-content">
+							<div class="tl-company">International Software Systems</div>
+							<h3>Summer Project Intern</h3>
+							<p>
+								Trained in HTML/CSS, Bootstrap, JavaScript, jQuery, Ajax,
+								Django, PostgreSQL, and BitBucket. Built a demo application
+								using MVT architecture and developed backend code with
+								PostgreSQL. Created mockup screens and validated user input.
+							</p>
+							<div class="tl-tags">
+								<span>Django</span><span>JavaScript</span><span>PostgreSQL</span
+								><span>Bootstrap</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PROJECTS -->
+		<section id="projects">
+			<div class="section-inner reveal">
+				<div class="section-label">04 — Projects & Leadership</div>
+				<h2>Things I've built<br /><em>&amp; led.</em></h2>
+				<div class="projects-grid">
+					<div class="project-card featured">
+						<div class="project-number">01</div>
+						<div class="project-body">
+							<h3>AgriShield & DisasterNet — AI SENSE</h3>
+							<p>
+								Two ethical AI systems developed at UMBC. AgriShield uses
+								edge-based face-swapping for privacy-preserving farm
+								surveillance. DisasterNet segments drone imagery to identify
+								water, roads, and vegetation for rapid disaster damage
+								assessment.
+							</p>
+							<div class="project-tags">
+								<span>Edge AI</span><span>Computer Vision</span
+								><span>Deep Learning</span><span>Privacy AI</span>
+							</div>
+						</div>
+						<div class="project-arrow">~</div>
+					</div>
+					<div class="project-card featured">
+						<div class="project-number">02</div>
+						<div class="project-body">
+							<h3>AI in K-12 Education — Research</h3>
+							<p>
+								Independent research project examining implementation and bias
+								in AI/ML systems within K-12 education environments. Surveyed
+								students, educators, and industry professionals to analyze
+								unintentional bias in AI grading systems and learning platforms.
+							</p>
+							<div class="project-tags">
+								<span>Research</span><span>AI Ethics</span><span>K-12 Ed</span>
+							</div>
+						</div>
+						<div class="project-arrow">~</div>
+					</div>
+					<div class="project-card">
+						<div class="project-number">03</div>
+						<div class="project-body">
+							<h3>Bias Mitigation in AI / ML</h3>
+							<p>
+								Research project analyzing demographic bias in machine learning
+								systems. Focused on data quality, feature engineering, algorithm
+								selection, bias detection tools, and continuous monitoring to
+								promote fairness.
+							</p>
+							<div class="project-tags">
+								<span>Research</span><span>ML Fairness</span><span>Python</span>
+							</div>
+						</div>
+						<div class="project-arrow">~</div>
+					</div>
+					<div class="project-card">
+						<div class="project-number">04</div>
+						<div class="project-body">
+							<h3>QuHacks 2025 — Organizer</h3>
+							<p>
+								Fundraised ~$7,000 to organize a large-scale hackathon at Johns
+								Hopkins APL. Coordinated outreach inviting hundreds of middle
+								and high school students.
+							</p>
+							<div class="project-tags">
+								<span>Leadership</span><span>Fundraising</span
+								><span>Outreach</span>
+							</div>
+						</div>
+						<div class="project-arrow">~</div>
+					</div>
+					<div class="project-card">
+						<div class="project-number">05</div>
+						<div class="project-body">
+							<h3>Pyoneers Python Club</h3>
+							<p>
+								President of the Pyoneers club. Led technical sessions, managed
+								operations, and supported the Competitive Informatics Tournament
+								(CInT) hackathon.
+							</p>
+							<div class="project-tags">
+								<span>Leadership</span><span>Python</span><span>Education</span>
+							</div>
+						</div>
+						<div class="project-arrow">~</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- EDUCATION & HONORS -->
+		<section id="education">
+			<div class="section-inner reveal">
+				<div class="section-label">05 — Education & Honors</div>
+				<h2>Academic<br /><em>background.</em></h2>
+				<div class="edu-grid">
+					<div class="edu-card">
+						<div class="edu-header">
+							<div>
+								<div class="edu-school">
+									University of Maryland, Baltimore County
+								</div>
+								<h3>B.S. Computer Science <em>(Incoming)</em></h3>
+							</div>
+							<span class="edu-date">Aug 2026</span>
+						</div>
+					</div>
+					<div class="edu-card">
+						<div class="edu-header">
+							<div>
+								<div class="edu-school">Centennial High School</div>
+								<h3>High School Diploma — Computer Programming Academy</h3>
+							</div>
+							<span class="edu-date">2022 – 2026</span>
+						</div>
+						<div class="edu-honors">
+							<span>National Honor Society</span>
+							<span>National English Honor Society</span>
+							<span>National Technology Honor Society</span>
+							<span>Science National Honor Society</span>
+							<span>National Math Honor Society</span>
+							<span>Sociedad Honoraria Hispánica</span>
+							<span>AP Scholar with Honor</span>
+						</div>
+					</div>
+					<div class="edu-card">
+						<div class="edu-header">
+							<div>
+								<div class="edu-school">Howard Community College</div>
+								<h3>
+									Dual Enrollment — Principles of Business & Management GT
+								</h3>
+							</div>
+							<span class="edu-date">Spring 2024</span>
+						</div>
+					</div>
+				</div>
+				<div class="certs-row">
+					<div class="section-label" style="margin-bottom: 1rem">
+						Certifications
+					</div>
+					<div class="certs-grid">
+						<div class="cert-card">
+							<i class="fa-solid fa-certificate"></i>
+							<div>
+								<span class="cert-name">Networking Fundamentals Pathway</span>
+								<span class="cert-issuer">QA North America · Dec 2024</span>
+							</div>
+						</div>
+						<div class="cert-card">
+							<i class="fa-solid fa-cloud"></i>
+							<div>
+								<span class="cert-name">Cloud Literacy Certificate</span>
+								<span class="cert-issuer">QA North America · Dec 2024</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="scouting-row">
+					<i class="fa-solid fa-campground"></i>
+					<span
+						>Life Scout — Baltimore Area Council, Scouting America &nbsp;·&nbsp;
+						Troop WebMaster, Patrol Leader, ASPL</span
+					>
+				</div>
+			</div>
+		</section>
+
+		<!-- CONTACT -->
+		<section id="contact">
+			<div class="section-inner contact-inner reveal">
+				<div class="section-label">06 — Contact</div>
+				<h2>Let's connect.</h2>
+				<p class="contact-sub">
+					I'm always open to discussing internships, research opportunities, or
+					cool projects.
+				</p>
+				<div class="contact-links">
+					<a href="mailto:rcheru5712@gmail.com" class="contact-item">
+						<i class="fa-solid fa-envelope"></i>
+						<span>rcheru5712@gmail.com</span>
+					</a>
+					<a href="tel:+15714642670" class="contact-item">
+						<i class="fa-solid fa-phone"></i>
+						<span>+1 (571) 464-2670</span>
+					</a>
+					<a
+						href="https://www.linkedin.com/in/ranacherukuri/"
+						target="_blank"
+						rel="noopener"
+						class="contact-item"
+					>
+						<i class="fa-brands fa-linkedin"></i>
+						<span>linkedin.com/in/ranacherukuri</span>
+					</a>
+				</div>
+				<a href="assets/RC_Resume.pdf" download class="btn-primary">
+					<i class="fa-solid fa-download"></i> Download Resume
+				</a>
+			</div>
+		</section>
 
 		<footer>
-			<p>
-				&copy; 2026 Rana Pratap Cherukuri. Built with purpose and curiosity.
-			</p>
+			<div class="footer-inner">
+				<span>© 2026 Rana Pratap Cherukuri</span>
+				<span>Built with purpose and curiosity.</span>
+			</div>
 		</footer>
 
-		<script src="script.js"></script>
+		<script src="revamp.js"></script>
 	</body>
 </html>
